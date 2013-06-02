@@ -1,15 +1,14 @@
 #include <QApplication>
-#include <QLabel>
-#include <QPushButton>
+#include <QTextCodec>
+#include "mainwindow.h"
+
 
 int main(int argc, char **argv){
 	QApplication app(argc, argv);
+	QTextCodec::setCodecForTr(QTextCodec::codecForLocale());
 
-	QPushButton *button=new QPushButton("Hello");
-	button->show();
-
-	//QLabel *label=new QLabel("Hello");
-	//label->show();
+	MainWindow *window=new MainWindow(&app);
+	window->show();
 
 	return app.exec();
 }

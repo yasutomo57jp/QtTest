@@ -14,4 +14,5 @@ unix {
 }
 
 # Input
-SOURCES += main.cpp
+SOURCES += main.cpp mainwindow.cpp
+HEADERS += mainwindow.h
